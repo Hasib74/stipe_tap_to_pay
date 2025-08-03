@@ -44,6 +44,13 @@ class MainActivity : FlutterActivity() {
 
     private fun initStripeTerminal(result: MethodChannel.Result) {
         // Token provider to fetch connection token from your backend
+
+
+        Log.d("StripeTerminal", "Api calling ....")
+
+
+        print("Api calling ... ")
+
         tokenProvider = object : ConnectionTokenProvider {
             override fun fetchConnectionToken(callback: ConnectionTokenCallback) {
                 val client = OkHttpClient()
