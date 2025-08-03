@@ -64,6 +64,12 @@ class MainActivity : FlutterActivity() {
                 client.newCall(request).enqueue(object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
                        // callback.onFailure(e)
+
+                        Log.d("StripeTerminal", "Api calling .... error ${e}")
+
+
+                        print("Api calling ...  error ${e} ")
+
                     }
 
                     override fun onResponse(call: Call, response: Response) {
