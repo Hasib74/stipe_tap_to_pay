@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:stripe_tap_to_pay/stripe_terminal_channel.dart';
 import 'package:stripe_tap_to_pay/tab_to_pay_screen.dart';
 
+import 'package:flutter/material.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text("Flutter Kotlin MethodChannel")),
-        body: TapToPayScreen()
+      title: 'Stripe Terminal Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: TerminalScreen(),
     );
   }
 }
